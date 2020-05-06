@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from bookings.views import BookingAPIView
+from loan.views import LoanRequestView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/bookings', BookingAPIView.as_view())
+    path('api/bookings', BookingAPIView.as_view()),
+    path('api/loan_request', LoanRequestView.as_view())
 ]
